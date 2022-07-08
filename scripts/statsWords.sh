@@ -31,3 +31,7 @@ PROMEDIO=$(echo "scale = 2; $(wc -m < $1) / $(wc -w < $1)" | bc)
 echo "$PROMEDIO"
 echo "$LONGEST"
 echo "$SHORTEST"
+<<<<<<< HEAD
+=======
+
+>>>>>>> aeac51a887cc22684aa62347d0a33c6e7bf3e1e5
