@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source lib.sh
-
 test_file $# $1
 
 LONGEST=""
