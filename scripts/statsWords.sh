@@ -2,7 +2,7 @@
 
 source lib.sh
 
-no_file $# || no_file_err
+test_file $# $1
 
 LONGEST=""
 SHORTEST=""
