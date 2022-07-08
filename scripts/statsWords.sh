@@ -28,6 +28,7 @@ done < "${1}"
 PROMEDIO=$(echo "scale = 2; $(wc -m < $1) / $(wc -w < $1)" | bc)
 
 # Se imprimen en pantalla los resultados.
+echo "$PROMEDIO"
 echo "$LONGEST"
 echo "$SHORTEST"
-echo "$PROMEDIO"
+
