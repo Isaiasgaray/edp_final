@@ -1,13 +1,14 @@
 #!/bin/bash
 
-[ "$#" -ne 1 ] && exit 1
+source lib.sh
+
+no_file $# || no_file_err
 
 LONGEST=""
 SHORTEST=""
 
 while read -r line; do
   for word in $line; do
-
     # Si la variable SHORTEST está vacía se o si 
     # la variable word tiene menos caracteres que SHORTEST
     # le asigna el valor de word a SHORTEST
@@ -28,6 +29,6 @@ done < "${1}"
 PROMEDIO=$(echo "scale = 2; $(wc -m < $1) / $(wc -w < $1)" | bc)
 
 # Se imprimen en pantalla los resultados.
-echo "Palabra más larga: $LONGEST"
-echo "Palabra más cort: $SHORTEST"
-echo "Promedio de longitud: $PROMEDIO"
+echo "$LONGEST"
+echo "$SHORTEST"
+echo "$PROMEDIO"
