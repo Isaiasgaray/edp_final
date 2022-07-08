@@ -1,7 +1,10 @@
 #!/bin/bash
 
-[ $# -ne 1 ] && exit 1
+source lib.sh
+test_file $# $1
 
+# Las palabras filtradas se guardan
+# en una variable.
 PALABRAS_FILTRADAS=$(
 # Itera sobre cada línea del archivo.
 while read -r line; do
@@ -14,7 +17,7 @@ while read -r line; do
 done < "${1}"
 )
 
-# Ordena las palabras alfabéticamente y muestras las diez más usadas.
+# Ordena las palabras alfabéticamente y muestra las diez más usadas.
 echo "$PALABRAS_FILTRADAS" \
   | sort \
   | uniq -c \
