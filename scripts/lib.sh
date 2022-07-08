@@ -12,7 +12,7 @@ function no_file {
 
 function no_file_err {
   # Mensaje de error genérico para funciones
-  # que necesita un archivo como input.
+  # que necesitan un archivo como input.
   err "Usage: ./$0 file.txt"
   exit 1
 }
