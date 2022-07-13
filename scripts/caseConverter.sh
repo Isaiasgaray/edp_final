@@ -5,7 +5,11 @@
 source lib.sh
 test_file $# $1
 
-FILE=$(cat $1)
 
-echo ${FILE~~} 
-	
+#Itera sobre cada linea cambiando mayùsculas a minùsculas y viceversa
+
+while read -r line
+do
+	echo "${line~~}"
+
+done < "${1}"	
