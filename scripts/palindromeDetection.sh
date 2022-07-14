@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# source lib.sh
-# test_file $# $1
+#Valida la existencia del archivo
+source lib.sh
+test_file $# $1
 
 # Función auxiliar para detectar palíndromos.
 function es_palindromo {
