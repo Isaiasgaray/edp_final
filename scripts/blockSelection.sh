@@ -22,11 +22,12 @@ function parrafos {
   
   # Si hay menos de dos párrafos se imprime el archivo completo.
   if [ $CANT_PARR -lt 2 ]; then
+    echo "El texto contiene un solo pàrrafo"  
     cat $FILE
     exit 0
   fi
 
-  # Si hay mas de dos párrafos el usuario puede elegir cuál imprimir.
+  # Si hay dos o mas párrafos el usuario puede elegir cuál imprimir.
   echo "Hay $CANT_PARR párrafos disponibles"
   read -p "Seleccione un número de párrafo: " N
   sed '/^$/d' $FILE | sed -n "${N}p"
@@ -38,6 +39,7 @@ function oraciones {
   CANT_ORAC=$(sed '/^$/d; s/\. /.\n/g' $FILE | wc -l)
 
   if [ $CANT_ORAC -lt 2 ]; then
+    echo "El texto contiene una oraciòn"  
     cat $FILE
     exit 0
   fi
