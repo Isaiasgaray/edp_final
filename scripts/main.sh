@@ -7,7 +7,7 @@ PS3="> "
 FILE=$(ls *.txt)
 
 # Prepara la lista de scripts.
-LIST=$(ls *.sh | grep -vE "(lib*|main*)")
+LIST=$(ls *.sh | grep -vE "(lib\.sh|main\.sh)")
 LIST="$LIST Exit"
 
 select opt in $LIST; do
