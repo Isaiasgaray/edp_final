@@ -12,8 +12,8 @@ LIST="$LIST Exit"
 
 select opt in $LIST; do
   case $opt in
-    *.sh) bash $opt $FILE        ;;
-    Exit) exit 0                 ;;
-    *)    echo "Opción inválida" ;;
+    *.sh) bash $opt $FILE          ;;
+    Exit|q) exit 0                 ;;
+    *)    echo "Opción inválida"   ;;
   esac
 done
