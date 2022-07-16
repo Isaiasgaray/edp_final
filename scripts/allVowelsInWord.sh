@@ -5,7 +5,7 @@ test_file $# $1
 
 # Primer filtro. se quedan las palabras que tienen al menos
 # cinco caracteres
-WORDS=$(grep -oE "[a-zA-Z{5,}" "${1}")
+WORDS=$(grep -oE "[a-zA-Z]{5,}" "${1}")
 
 # Itera sobre las vocales para filtrar las palabras
 for vowel in {aá,eé,ií,oó,uú}; do
